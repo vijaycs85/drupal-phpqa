@@ -1,0 +1,24 @@
+{
+  "name": "vijaycs85/drupal-phpqa",
+  "description": "PHPQA implementation for Drupal project.",
+  "type": "drupal-tool",
+  "license": "GPL-2.0-or-later",
+  "require": {
+    "edgedesign/phpqa": "^1.22",
+    "squizlabs/php_codesniffer": "3.0.1",
+    "sebastian/phpcpd": "4.1.0",
+    "jakub-onderka/php-parallel-lint": "1.0.0",
+    "sensiolabs/security-checker": "5.0.3",
+    "drupal/coder": "^8.3"
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "bin/phpcs --config-set installed_paths vendor/drupal/coder/coder_sniffer"
+    ]
+  },
+  "config": {
+    "bin-dir": "bin/"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

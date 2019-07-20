@@ -1,0 +1,27 @@
+phpqa:
+  extensions:
+    - inc
+    - install
+    - module
+    - php
+    - profile
+    - theme
+  analyzedDirs:
+   # directory to run phpqa.
+    - ./../core/modules/node
+  buildDir: report
+  ignoredDirs: vendor,contrib,sites,tests,node_modules
+  ignoredFiles: "*.css,*.md,*.txt,*.info,*.yml"
+  tools: phpmetrics,phpcs:200,phpmd:100,phpcpd:5,phploc,pdepend,parallel-lint,security-checker
+  report: true
+  verbose: false
+
+phpcs:
+  standard: vendor/drupal/coder/coder_sniffer/Drupal
+
+phpmd:
+  standard: phpmd.xml
+
+phpcpd:
+  minLines: 5
+  minTokens: 70
