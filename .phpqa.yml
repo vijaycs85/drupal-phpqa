@@ -6,9 +6,8 @@ phpqa:
     - php
     - profile
     - theme
-  analyzedDirs:
-   # directory to run phpqa.
-    - ./../core/modules/node
+  # directory to run phpqa.
+  analyzedDirs: "./../core/modules/node"
   buildDir: report
   ignoredDirs: vendor,contrib,sites,tests,node_modules
   ignoredFiles: "*.css,*.md,*.txt,*.info,*.yml"
